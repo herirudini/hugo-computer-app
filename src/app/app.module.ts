@@ -8,6 +8,9 @@ import { StoreModule } from '@ngrx/store';
 import { TopbarComponent } from './__molecule/topbar/topbar.component';
 import { ProductListComponent } from './__items/product/product-list/product-list.component';
 import { AuthComponent } from './__items/auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,10 @@ import { AuthComponent } from './__items/auth/auth.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {})
   ],

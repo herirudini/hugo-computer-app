@@ -1,4 +1,18 @@
 .auth {
     align-items: center;
     justify-content: center;
+    &-header {
+        ul {
+            align-items: center;
+            justify-content: space-around;
+            button {
+                width: 100%;
+            }
+            .inactive {
+                background-color: rgba($color: grey, $alpha: 0.5);
+                color: white;
+                font-weight: 500;
+            }
+        }
+    }
 }
