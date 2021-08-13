@@ -1,0 +1,59 @@
+<div class="auth tw-flex tw-flex-col tw-mt-20">
+    <div class="tw-w-full tw-max-w-xs">
+        <div class="auth-header">
+            <ul class="tw-flex tw-border-b">
+                <li class="">
+                    <button
+                        [ngClass]="[chooseLogin ? 'tw-bg-white tw-inline-block tw-border-l tw-border-t tw-border-r tw-rounded-t tw-py-2 tw-px-4 tw-text-blue-700 tw-font-semibold' : 'tw-bg-white tw-inline-block tw-py-2 tw-px-4 tw-text-blue-500 tw-hover:text-blue-800 tw-font-semibold']"
+                        (click)="chooseAuth('login')">Sign In</button>
+                </li>
+                <li class="">
+                    <button
+                        [ngClass]="[!chooseLogin ? 'tw-bg-white tw-inline-block tw-border-l tw-border-t tw-border-r tw-rounded-t tw-py-2 tw-px-4 tw-text-blue-700 tw-font-semibold' : 'tw-bg-white tw-inline-block tw-py-2 tw-px-4 tw-text-blue-500 tw-hover:text-blue-800 tw-font-semibold']"
+                        (click)="chooseAuth('signup')">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+        <div class="auth-content">
+            <div class="auth-content-item_1">
+                <form class="tw-bg-white tw-shadow-md tw-rounded tw-px-8 tw-pt-6 tw-pb-8 tw-mb-4">
+                    <div class="tw-mb-4">
+                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2" for="username">
+                            Username
+                        </label>
+                        <input
+                            class="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
+                            id="username" type="text" placeholder="Username">
+                    </div>
+                    <div class="tw-mb-6">
+                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2" for="password">
+                            Password
+                        </label>
+                        <input
+                            class="tw-shadow tw-appearance-none tw-border tw-border-red-500 tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-mb-3 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
+                            id="password" type="password" placeholder="******************">
+                        <p class="tw-text-red-500 tw-text-xs tw-italic">Please choose a password.</p>
+                    </div>
+                    <div class="tw-flex tw-items-center tw-justify-between">
+                        <button
+                            class="tw-bg-blue-500 tw-hover:bg-blue-700 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-focus:outline-none tw-focus:shadow-outline"
+                            type="button">
+                            Sign In
+                        </button>
+                        <a class="tw-inline-block tw-align-baseline tw-font-bold tw-text-sm tw-text-blue-500 tw-hover:text-blue-800" href="#">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="auth-content-item_2">
+                
+            </div>
+        </div>
+        <div class="auth-footer">
+            <p class="tw-text-center tw-text-gray-500 tw-text-xs">
+                &copy;2020 Acme Corp. All rights reserved.
+            </p>
+        </div>
+    </div>
+</div>
