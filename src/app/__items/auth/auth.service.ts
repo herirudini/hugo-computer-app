@@ -9,10 +9,10 @@ export class AuthService {
 
     constructor(private http: HttpClient) { }
 
-    login(data: Observable<AuthInterface>): Promise<any> {
-        console.log('run login service..', data)
+    signIn(data: Observable<AuthInterface>): Promise<any> {
+        console.log('run signIn service..', data)
         return new Promise((resolve, reject) => {
-            this.http.post(`${env.customerAPI}/auth/login`, data)
+            this.http.post(`${env.customerAPI}/auth/signIn`, data)
                 .subscribe(
                     (res: any) => {
                         resolve(res)
@@ -25,9 +25,9 @@ export class AuthService {
     }
 
     signUp(data: Observable<AuthInterface>): Promise<any> {
-        console.log('run signup service..', data)
+        console.log('run signUp service..', data)
         return new Promise((resolve, reject) => {
-            this.http.post(`${env.customerAPI}/auth/signup`, data)
+            this.http.post(`${env.customerAPI}/auth/signUp`, data)
                 .subscribe(
                     (res: any) => {
                         resolve(res)

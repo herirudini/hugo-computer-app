@@ -9,15 +9,15 @@ import { AuthService } from './auth.service';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
-  chooseLogin: boolean = true;
+  chooseSignIn: boolean = true;
   submitted: boolean = false;
   chooseAuth(choise: string) {
-    if (choise == 'login') {
-      this.chooseLogin = true;
+    if (choise == 'signIn') {
+      this.chooseSignIn = true;
     } else {
-      this.chooseLogin = false;
+      this.chooseSignIn = false;
     }
-    console.log(this.chooseLogin)
+    console.log(this.chooseSignIn)
   }
 
   authData: AuthInterface;
@@ -34,15 +34,17 @@ export class AuthComponent implements OnInit {
   }
   onSubmit() {
     this.submitted = true;
-    if (this.chooseLogin) {
-      this.runLogin()
+    if (this.chooseSignIn) {
+      this.runSignIn();
+      this.submitted = false;
     } else {
-      this.runSignup()
+      this.runSignUp();
+      this.submitted = false;
     }
   }
-  runLogin() {
-    console.log('runlogin: ',this.authForms.value)
-    this.authService.login(this.authForms.value)
+  runSignIn() {
+    console.log('runSignIn: ',this.authForms.value)
+    this.authService.signIn(this.authForms.value)
       .then((res: any) => {
         console.log('Success: ', res)
       })
@@ -50,7 +52,9 @@ export class AuthComponent implements OnInit {
         console.log('Error: ', err)
       })
   }
-  runSignup() {
+  runSignUp() {
+    console.log('runSignUp: ',this.authForms.value)
+
     this.authService.signUp(this.authForms.value)
       .then((res: any) => {
         console.log('Success: ', res)
