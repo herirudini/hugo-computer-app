@@ -10,21 +10,25 @@ import { AuthService } from './auth.service';
 })
 export class AuthComponent implements OnInit {
   chooseSignIn: boolean = true;
+  touched = {
+    email: false,
+    password: false
+  }
   submitted: boolean = false;
+  authData: AuthInterface;
+  authForms: FormGroup
+  
+  constructor(
+    private authService: AuthService
+  ) { }
+
   chooseAuth(choise: string) {
     if (choise == 'signIn') {
       this.chooseSignIn = true;
     } else {
       this.chooseSignIn = false;
     }
-    console.log(this.chooseSignIn)
   }
-
-  authData: AuthInterface;
-  authForms: FormGroup
-  constructor(
-    private authService: AuthService
-  ) { }
 
   ngOnInit(): void {
     this.authForms = new FormGroup({
@@ -34,12 +38,18 @@ export class AuthComponent implements OnInit {
   }
   onSubmit() {
     this.submitted = true;
-    if (this.chooseSignIn) {
+    if (this.authForms.valid && this.chooseSignIn) {
       this.runSignIn();
       this.submitted = false;
-    } else {
+      this.touched.email = false;
+      this.touched.password = false;
+      this.authForms.reset()
+    } else if (this.authForms.valid && !this.chooseSignIn) {
       this.runSignUp();
       this.submitted = false;
+      this.touched.email = false;
+      this.touched.password = false
+      this.authForms.reset()
     }
   }
   runSignIn() {
