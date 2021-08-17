@@ -11,5 +11,7 @@ export class TopbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  doSearch(keywords: any) {
+    console.log('searchbox: ',keywords.value)
+  }
 }

@@ -1,1 +1,29 @@
-<p>topbar works!</p>
+<!-- <mat-toolbar class="example-spacer">
+  <div style="height: 100%">
+    <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <mat-icon
+      class="example-icon"
+      aria-hidden="false"
+      aria-label="Example user verified icon"
+      >verified_user</mat-icon
+    >
+  </div>
+  
+</mat-toolbar> -->
+<mat-toolbar [ngStyle]="{'color':'black'}" class="toolbar tw-flex tw-flex-row">
+  <span class="toolbar-title">Logoooo</span>
+  <div class="toolbar-searchbox">
+    <form #searchbox="ngForm" class="tw-flex tw-flex-row" (ngSubmit)="doSearch(searchbox)">
+      <input
+        type="text"
+        placeholder="Search..."
+        name="search"
+        ngModel
+      />
+      <button mat-flat-button color="primary" [ngStyle]="{'border-radius': '0', 'height':'100%'}" class="search-btn tw-flex tw-flex-row" type="submit">
+        <mat-icon [ngStyle]="{'color': 'white'}">search</mat-icon>
+      </button>
+    </form>
+  </div>
+</mat-toolbar>

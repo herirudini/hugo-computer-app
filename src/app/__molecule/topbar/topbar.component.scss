@@ -1,0 +1,40 @@
+.toolbar {
+  height: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+  padding: 10px;
+  &-title {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+  }
+  &-searchbox {
+    margin: 10px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    form {
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      border: none;
+      input {
+        padding: 0 10px;
+        flex: 80%;
+        border: none;
+        box-shadow: none;
+      }
+      .search-btn {
+        color: white;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
