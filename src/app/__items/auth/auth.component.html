@@ -1,105 +1,263 @@
-<div class="global tw-flex tw-flex-col">
-    <div class="auth tw-w-full tw-max-w-xs tw-bg-white tw-shadow-md tw-rounded-t">
+<div class="tw-flex tw-flex-row">
+  <div class="main">
+    <app-topbar></app-topbar>
+
+    <div class="global tw-flex tw-flex-col">
+      <div
+        class="auth tw-w-full tw-max-w-xs tw-bg-white tw-shadow-md tw-rounded-t"
+      >
         <div class="auth-header tw-rounded-t">
-            <ul class="tw-flex">
-                <li class="tw-bg-white tw-inline-block tw-w-full"
-                [ngClass]="[chooseSignIn ? 'active' : 'inactive left']"
-                >
-                    <button class="tw-py-4 tw-px-4"
-                        (click)="chooseAuth('signIn')">Sign In</button>
-                </li>
-                <li class="tw-bg-white tw-inline-block tw-w-full"
-                [ngClass]="[!chooseSignIn ? 'active' : 'inactive right']"
-                >
-                    <button class="tw-p-4"
-                        (click)="chooseAuth('signUp')">Sign Up</button>
-                </li>
-            </ul>
+          <ul class="tw-flex">
+            <li
+              class="tw-bg-white tw-inline-block tw-w-full"
+              [ngClass]="[chooseSignIn ? 'active' : 'inactive left']"
+            >
+              <button class="tw-py-4 tw-px-4" (click)="chooseAuth('signIn')">
+                Sign In
+              </button>
+            </li>
+            <li
+              class="tw-bg-white tw-inline-block tw-w-full"
+              [ngClass]="[!chooseSignIn ? 'active' : 'inactive right']"
+            >
+              <button class="tw-p-4" (click)="chooseAuth('signUp')">
+                Sign Up
+              </button>
+            </li>
+          </ul>
         </div>
         <div class="auth-content">
-            <div *ngIf="chooseSignIn" class="auth-content-item_1">
-                <form class="tw-px-8 tw-pt-6 tw-pb-8 tw-mb-4"
-                    [formGroup]="authForms" (ngSubmit)="onSubmit()">
-                    <div class="tw-mb-4">
-                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2" for="email">
-                            Email
-                        </label>
-                        <input
-                            class="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
-                            [ngClass]="{'tw-border-red-500': (touched.email && authForms.controls.email.invalid )}"
-                            id="email" type="text" placeholder="Email" formControlName="email" (change)="touched.email = true">
-                    </div>
-                    <div class="tw-mb-6">
-                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2" for="password">
-                            Password
-                        </label>
-                        <input
-                            class="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-mb-3 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
-                            [ngClass]="{'tw-border-red-500': (touched.password && authForms.controls.password.invalid )}"
-                            id="password" type="password" placeholder="******************" formControlName="password" (change)="touched.password= true">
-                        <p *ngIf="submitted && authForms.controls.email.invalid"
-                            class="tw-text-red-500 tw-text-xs tw-italic">Please input a valid email.</p>
-                        <p *ngIf="submitted && authForms.controls.password.invalid"
-                            class="tw-text-red-500 tw-text-xs tw-italic">Please input a valid password.</p>
-                    </div>
-                    <div class="tw-flex tw-items-center tw-justify-between">
-                        <button
-                            class="tw-bg-blue-500 tw-hover:bg-blue-700 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-focus:outline-none tw-focus:shadow-outline"
-                            type="submit">
-                            Sign In
-                        </button>
-                        <a class="tw-inline-block tw-align-baseline tw-font-bold tw-text-sm tw-text-blue-500 tw-hover:text-blue-800"
-                            href="#">
-                            Forgot Password?
-                        </a>
-                    </div>
-                </form>
-            </div>
-            <div *ngIf="!chooseSignIn" class="auth-content-item_1">
-                <form class="tw-px-8 tw-pt-6 tw-pb-8 tw-mb-4"
-                    [formGroup]="authForms" (ngSubmit)="onSubmit()">
-                    <div class="tw-mb-4">
-                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2" for="email">
-                            Email
-                        </label>
-                        <input
-                            class="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
-                            [ngClass]="{'tw-border-red-500': (touched.email && authForms.controls.email.invalid )}"
-                            id="email" type="text" placeholder="Email" formControlName="email" (change)="touched.email = true">
-                    </div>
-                    <div class="tw-mb-6">
-                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2" for="password">
-                            Password
-                        </label>
-                        <input
-                            class="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-mb-3 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
-                            [ngClass]="{'tw-border-red-500': (touched.password && authForms.controls.password.invalid )}"
-                            id="password" type="password" placeholder="******************" formControlName="password" (change)="touched.password = true">
-                        <p *ngIf="submitted && authForms.controls.email.invalid"
-                            class="tw-text-red-500 tw-text-xs tw-italic">Please input a valid email.</p>
-                        <p *ngIf="submitted && authForms.controls.password.invalid"
-                            class="tw-text-red-500 tw-text-xs tw-italic">Please input a valid password.</p>
-                    </div>
-                    <div class="tw-flex tw-items-center tw-justify-between">
-                        <button
-                            class="tw-bg-blue-500 tw-hover:bg-blue-700 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-focus:outline-none tw-focus:shadow-outline"
-                            type="submit">
-                            Sign Up
-                        </button>
-                        <button class="tw-inline-block tw-align-baseline tw-font-bold tw-text-sm tw-text-blue-500 tw-hover:text-blue-800" (click)="chooseSignIn = true">
-                            Already have Account?
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <div class="auth-content-item_2">
-
-            </div>
+          <div *ngIf="chooseSignIn" class="auth-content-item_1">
+            <form
+              class="tw-px-8 tw-pt-6 tw-pb-8 tw-mb-4"
+              [formGroup]="authForms"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="tw-mb-4">
+                <label
+                  class="
+                    tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2
+                  "
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  class="
+                    tw-appearance-none
+                    tw-border
+                    tw-rounded
+                    tw-w-full
+                    tw-py-2
+                    tw-px-3
+                    tw-text-gray-700
+                    tw-leading-tight
+                    tw-focus:outline-none tw-focus:shadow-outline
+                  "
+                  [ngClass]="{
+                    'tw-border-red-500':
+                      touched.email && authForms.controls.email.invalid
+                  }"
+                  id="email"
+                  type="text"
+                  placeholder="Email"
+                  formControlName="email"
+                  (change)="touched.email = true"
+                />
+              </div>
+              <div class="tw-mb-6">
+                <label
+                  class="
+                    tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2
+                  "
+                  for="password"
+                >
+                  Password
+                </label>
+                <input
+                  class="
+                    tw-appearance-none
+                    tw-border
+                    tw-rounded
+                    tw-w-full
+                    tw-py-2
+                    tw-px-3
+                    tw-text-gray-700
+                    tw-mb-3
+                    tw-leading-tight
+                    tw-focus:outline-none tw-focus:shadow-outline
+                  "
+                  [ngClass]="{
+                    'tw-border-red-500':
+                      touched.password && authForms.controls.password.invalid
+                  }"
+                  id="password"
+                  type="password"
+                  placeholder="******************"
+                  formControlName="password"
+                  (change)="touched.password = true"
+                />
+                <p
+                  *ngIf="submitted && authForms.controls.email.invalid"
+                  class="tw-text-red-500 tw-text-xs tw-italic"
+                >
+                  Please input a valid email.
+                </p>
+                <p
+                  *ngIf="submitted && authForms.controls.password.invalid"
+                  class="tw-text-red-500 tw-text-xs tw-italic"
+                >
+                  Please input a valid password.
+                </p>
+              </div>
+              <div class="tw-flex tw-items-center tw-justify-between">
+                <button
+                  class="
+                    tw-bg-blue-500
+                    tw-hover:bg-blue-700
+                    tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded
+                    tw-focus:outline-none tw-focus:shadow-outline
+                  "
+                  type="submit"
+                >
+                  Sign In
+                </button>
+                <a
+                  class="
+                    tw-inline-block
+                    tw-align-baseline
+                    tw-font-bold
+                    tw-text-sm
+                    tw-text-blue-500
+                    tw-hover:text-blue-800
+                  "
+                  href="#"
+                >
+                  Forgot Password?
+                </a>
+              </div>
+            </form>
+          </div>
+          <div *ngIf="!chooseSignIn" class="auth-content-item_1">
+            <form
+              class="tw-px-8 tw-pt-6 tw-pb-8 tw-mb-4"
+              [formGroup]="authForms"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="tw-mb-4">
+                <label
+                  class="
+                    tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2
+                  "
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  class="
+                    tw-appearance-none
+                    tw-border
+                    tw-rounded
+                    tw-w-full
+                    tw-py-2
+                    tw-px-3
+                    tw-text-gray-700
+                    tw-leading-tight
+                    tw-focus:outline-none tw-focus:shadow-outline
+                  "
+                  [ngClass]="{
+                    'tw-border-red-500':
+                      touched.email && authForms.controls.email.invalid
+                  }"
+                  id="email"
+                  type="text"
+                  placeholder="Email"
+                  formControlName="email"
+                  (change)="touched.email = true"
+                />
+              </div>
+              <div class="tw-mb-6">
+                <label
+                  class="
+                    tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2
+                  "
+                  for="password"
+                >
+                  Password
+                </label>
+                <input
+                  class="
+                    tw-appearance-none
+                    tw-border
+                    tw-rounded
+                    tw-w-full
+                    tw-py-2
+                    tw-px-3
+                    tw-text-gray-700
+                    tw-mb-3
+                    tw-leading-tight
+                    tw-focus:outline-none tw-focus:shadow-outline
+                  "
+                  [ngClass]="{
+                    'tw-border-red-500':
+                      touched.password && authForms.controls.password.invalid
+                  }"
+                  id="password"
+                  type="password"
+                  placeholder="******************"
+                  formControlName="password"
+                  (change)="touched.password = true"
+                />
+                <p
+                  *ngIf="submitted && authForms.controls.email.invalid"
+                  class="tw-text-red-500 tw-text-xs tw-italic"
+                >
+                  Please input a valid email.
+                </p>
+                <p
+                  *ngIf="submitted && authForms.controls.password.invalid"
+                  class="tw-text-red-500 tw-text-xs tw-italic"
+                >
+                  Please input a valid password.
+                </p>
+              </div>
+              <div class="tw-flex tw-items-center tw-justify-between">
+                <button
+                  class="
+                    tw-bg-blue-500
+                    tw-hover:bg-blue-700
+                    tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded
+                    tw-focus:outline-none tw-focus:shadow-outline
+                  "
+                  type="submit"
+                >
+                  Sign Up
+                </button>
+                <button
+                  class="
+                    tw-inline-block
+                    tw-align-baseline
+                    tw-font-bold
+                    tw-text-sm
+                    tw-text-blue-500
+                    tw-hover:text-blue-800
+                  "
+                  (click)="chooseSignIn = true"
+                >
+                  Already have Account?
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="auth-content-item_2"></div>
         </div>
         <div class="auth-footer">
-            <p class="tw-text-center tw-text-gray-500 tw-text-xs">
-                &copy;2020 Acme Corp. All rights reserved.
-            </p>
+          <p class="tw-text-center tw-text-gray-500 tw-text-xs">
+            &copy;2020 Acme Corp. All rights reserved.
+          </p>
         </div>
+      </div>
     </div>
+  </div>
+  <app-sidebar class="sidebar"></app-sidebar>
 </div>

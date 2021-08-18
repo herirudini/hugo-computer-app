@@ -11,7 +11,7 @@
   </div>
   
 </mat-toolbar> -->
-<mat-toolbar [ngStyle]="{'color':'black'}" class="toolbar tw-flex tw-flex-row">
+<mat-toolbar [ngStyle]="{'color':'black', 'top':'0' }" class="toolbar tw-flex tw-flex-row">
   <span class="toolbar-title">Logoooo</span>
   <div class="toolbar-searchbox">
     <form #searchbox="ngForm" class="tw-flex tw-flex-row" (ngSubmit)="doSearch(searchbox)">

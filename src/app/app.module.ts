@@ -5,19 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { TopbarComponent } from './__molecule/topbar/topbar.component';
-import { ProductListComponent } from './__items/product/product-list/product-list.component';
-import { AuthComponent } from './__items/auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './material-module';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
+import { TopbarComponent } from './__molecule/topbar/topbar.component';
+import { SidebarComponent } from './__molecule/sidebar/sidebar.component';
+import { ProductListComponent } from './__items/product/product-list/product-list.component';
+import { AuthComponent } from './__items/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +21,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     TopbarComponent,
     ProductListComponent,
     AuthComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,14 +32,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatTabsModule,
+    MaterialModule,
   ],
-  providers: [],
+  entryComponents: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
