@@ -1,0 +1,64 @@
+<div class="cart tw-flex tw-flex-col">
+  <div class="cart-header">
+    <h2 class="cart-header-title">Cart</h2>
+  </div>
+  <div class="cart-main">
+    <div class="cart-main-content">
+      <section class="cart-main-content-item tw-flex tw-flex-row">
+        <div class="cart-main-content-item-image">
+          <img src="../../../assets/Berita-terbaru-thumail-desktop.png" />
+        </div>
+        <div class="cart-main-content-item-chunk tw-flex">
+            <em class="cart-main-content-item-chunk-title"> SepatuLa Panjang Judulnyaaaaaaaaaaaaaaaaaaaaaaaaaaa</em>
+          <input
+            type="number"
+            class="
+              tw-rounded-lg tw-outline-none
+              tw-focus:outline-none
+              tw-text-center
+              tw-w-full
+              tw-bg-gray-300
+              tw-font-semibold
+              tw-text-md
+              tw-hover:text-black
+              tw-focus:text-black
+              tw-md:text-basecursor-default
+              tw-flex tw-items-center tw-text-gray-700 tw-outline-none
+            "
+            name="custom-input-number"
+            value="0"
+          />
+          <form #quantity="ngForm" class="tw-flex tw-flex-col">
+            <textarea
+              type="textarea"
+              placeholder="Add Notes..."
+              name="note"
+              class="
+                tw-w-full
+                tw-px-3
+                tw-py-2
+                tw-text-gray-700
+                tw-border
+                tw-rounded-lg
+                tw-focus:outline-none
+              "
+              rows="2"
+              ngModel
+            ></textarea>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <button
+      mat-flat-button
+      color="primary"
+      [ngStyle]="{ 'border-radius': '0', height: '100%', width: '100%' }"
+      class="search-btn tw-flex tw-flex-row"
+      type="submit"
+    >
+      Checkout
+    </button>
+  </div>
+</div>

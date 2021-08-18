@@ -14,6 +14,7 @@ import { TopbarComponent } from './__molecule/topbar/topbar.component';
 import { SidebarComponent } from './__molecule/sidebar/sidebar.component';
 import { ProductListComponent } from './__items/product/product-list/product-list.component';
 import { AuthComponent } from './__items/auth/auth.component';
+import { CartComponent } from './__skeleton/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AuthComponent } from './__items/auth/auth.component';
     ProductListComponent,
     AuthComponent,
     SidebarComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
