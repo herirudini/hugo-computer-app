@@ -1,29 +1,32 @@
-<!-- <mat-toolbar class="example-spacer">
-  <div style="height: 100%">
-    <span>Second Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon
-      class="example-icon"
-      aria-hidden="false"
-      aria-label="Example user verified icon"
-      >verified_user</mat-icon
-    >
-  </div>
-  
-</mat-toolbar> -->
-<mat-toolbar [ngStyle]="{'color':'black', 'top':'0' }" class="toolbar tw-flex tw-flex-row">
+<mat-toolbar
+  [ngStyle]="{ color: 'black', top: '0' }"
+  class="toolbar tw-flex tw-flex-row"
+>
   <span class="toolbar-title">Logoooo</span>
-  <div class="toolbar-searchbox">
-    <form #searchbox="ngForm" class="tw-flex tw-flex-row" (ngSubmit)="doSearch(searchbox)">
-      <input
-        type="text"
-        placeholder="Search..."
-        name="search"
-        ngModel
-      />
-      <button mat-flat-button color="primary" [ngStyle]="{'border-radius': '0', 'height':'100%'}" class="search-btn tw-flex tw-flex-row" type="submit">
-        <mat-icon [ngStyle]="{'color': 'white'}">search</mat-icon>
+  <form
+    #searchbox="ngForm"
+    class="tw-relative tw-text-gray-600 tw-focus-within:text-gray-400"
+    (ngSubmit)="doSearch(searchbox)"
+  >
+    <input
+      class="
+        tw-rounded-md
+        tw-focus:outline-none tw-focus:bg-white tw-focus:text-gray-900
+      "
+      type="search"
+      placeholder="Search..."
+      name="search"
+      ngModel
+    />
+    <span class="tw-absolute tw-text-sm tw-inset-y-0 tw-right-0 tw-flex">
+      <button
+        mat-button
+        [ngStyle]="{ 'border-radius': '0' }"
+        class="search-btn tw-flex tw-flex-row"
+        type="submit"
+      >
+        <mat-icon [ngStyle]="{ color: '#7b1fa2' }">search</mat-icon>
       </button>
-    </form>
-  </div>
+    </span>
+  </form>
 </mat-toolbar>

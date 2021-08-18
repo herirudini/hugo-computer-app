@@ -9,28 +9,15 @@
     font-size: large;
     font-weight: bold;
   }
-  &-searchbox {
-    margin: 10px;
-    width: 100%;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    form {
-      justify-content: space-between;
+  form {
+    width: 80%;
+    input {
+      width: 100%;
+      padding: 5px 10px;
+    }
+    span {
       align-items: center;
-      flex-wrap: nowrap;
-      border: none;
-      input {
-        padding: 0 10px;
-        flex: 80%;
-        border: none;
-        box-shadow: none;
-      }
       .search-btn {
-        color: white;
-        border-radius: 100%;
-        width: 32px;
-        height: 32px;
         display: flex;
         align-items: center;
         justify-content: center;
