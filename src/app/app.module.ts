@@ -10,11 +10,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material-module';
 
-import { TopbarComponent } from './__molecule/topbar/topbar.component';
-import { SidebarComponent } from './__molecule/sidebar/sidebar.component';
-import { ProductListComponent } from './__items/product/product-list/product-list.component';
-import { AuthComponent } from './__items/auth/auth.component';
-import { CartComponent } from './__skeleton/cart/cart.component';
+import { TopbarComponent } from './__skeleton/topbar/topbar.component';
+import { SidebarComponent } from './__skeleton/sidebar/sidebar.component';
+import { ProductListComponent } from './__molecule/product/product-list/product-list.component';
+import { AuthComponent } from './__skeleton/auth/auth.component';
+import { CartComponent } from './__molecule/cart/cart.component';
 
 @NgModule({
   declarations: [
