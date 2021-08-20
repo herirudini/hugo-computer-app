@@ -1,0 +1,54 @@
+.product-detail {
+  &-body {
+    &_leftBlock {
+      float: left;
+      width: 50%;
+      &-image {
+        &-preview {
+          width: 100%;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        &-list {
+          overflow-x: scroll;
+          &-item {
+            display: inline-block;
+            // width: 50px;
+            margin-left: 5px;
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+            img {
+              width: 50px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      
+    }
+    &_rightBlock {
+      float: right;
+      width: 50%;
+      &-options {
+        flex-wrap: nowrap;
+        // justify-content: space-evenly;
+        &::ng-deep {
+          button {
+            margin: 10px;
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      &-description {
+        p {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

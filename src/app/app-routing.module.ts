@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './__skeleton/auth/auth.component';
 import { ProductListComponent } from './__molecule/product/product-list/product-list.component';
 import { CartComponent } from './__molecule/cart/cart.component';
+import { ProductDetailComponent } from './__molecule/product/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductListComponent
+  },
+  {
+    path: 'products/detail',
+    component: ProductDetailComponent
   },
   {
     path: 'cart',
