@@ -4,6 +4,7 @@ import { AuthComponent } from './__skeleton/auth/auth.component';
 import { ProductListComponent } from './__molecule/product/product-list/product-list.component';
 import { CartComponent } from './__molecule/cart/cart.component';
 import { ProductDetailComponent } from './__molecule/product/product-detail/product-detail.component';
+import { CheckoutComponent } from './__pages/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,8 @@ const routes: Routes = [
     component: ProductDetailComponent
   },
   {
-    path: 'cart',
-    component: CartComponent
+    path: 'checkout',
+    component: CheckoutComponent
   }
 ];
 

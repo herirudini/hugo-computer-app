@@ -16,6 +16,7 @@ import { ProductListComponent } from './__molecule/product/product-list/product-
 import { AuthComponent } from './__skeleton/auth/auth.component';
 import { CartComponent } from './__molecule/cart/cart.component';
 import { ProductDetailComponent } from './__molecule/product/product-detail/product-detail.component';
+import { CheckoutComponent } from './__pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductDetailComponent } from './__molecule/product/product-detail/prod
     SidebarComponent,
     CartComponent,
     ProductDetailComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

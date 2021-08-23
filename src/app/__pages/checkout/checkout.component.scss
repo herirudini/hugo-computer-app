@@ -1,0 +1,62 @@
+.checkout {
+    height: 100%;
+    width: 100%;
+    &-main {
+      height: 100%;
+      align-items: space-between;
+      flex: 2;
+      &_leftBlock {
+          width: 100%;
+      }
+      &_rightBlock {
+        height: 100%;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100%;
+        // flex: 50%;
+        table {
+          width: 100%;
+        }
+        table,
+        th,
+        td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th,
+        td {
+          padding: 5px;
+          text-align: left;
+        }
+        &-dialog {
+          &-price {
+            justify-content: space-between;
+            em {
+              font-style: normal;
+              text-emphasis-style: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    // -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .custom-number-input input:focus {
+    outline: none !important;
+  }
+  
+  .custom-number-input button:focus {
+    outline: none !important;
+  }
+  
+  .cart-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
