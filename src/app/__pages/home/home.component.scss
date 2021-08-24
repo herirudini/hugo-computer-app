@@ -6,20 +6,21 @@
 }
 
 .home {
-  padding-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   &-main {
-    width: 70%;
+    padding-top: 80px;
+    // width: 70%;
     &-list {
     }
   }
   &-side {
     position: sticky;
-    top: 100px;
+    top: 55px;
     height: calc(90 * 1vh);
-    width: 30%;
+    margin-left: 20px;
+    // width: 500px;
     &-cart {
       height: 70%;
       &-heading {
@@ -29,7 +30,7 @@
       }
     }
     &-progress {
-      margin-top: 50px;
+      margin-top: 10px;
       &-heading {
           text-align: center;
       }

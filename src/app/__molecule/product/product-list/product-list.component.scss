@@ -14,7 +14,7 @@
     }
     &_item {
     width: calc(150px + 3vw);
-      margin: 5px;
+      margin-bottom: 5px;
       box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       @media screen and(max-width:500px) {
