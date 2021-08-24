@@ -34,63 +34,70 @@
           </tr>
         </tbody>
       </table>
-      <section class="checkout-main_rightBlock-dialog tw-mt-6">
-        <form action="">
-          <section class="tw-mb-4">
-            <h3 class="tw-text-xl tw-font-bold">Shipment</h3>
-            <input type="radio" id="JNE" name="fav_language" value="JNE" />
-            <label for="JNE">JNE</label><br />
-            <input type="radio" id="JNT" name="fav_language" value="JNT" />
-            <label for="JNT">JNT</label><br />
-            <input type="radio" id="POS" name="fav_language" value="POS" />
-            <label for="POS">POS</label>
-          </section>
-          <section class="tw-mb-4">
-            <h3 class="tw-text-xl tw-font-bold">Payment</h3>
-            <input
-              type="radio"
-              id="Bank Transfer"
-              name="fav_language"
-              value="Bank Transfer"
-            />
-            <label for="Bank Transfer">Bank Transfer</label><br />
-            <input
-              type="radio"
-              id="Credit Card"
-              name="fav_language"
-              value="Credit Card"
-            />
-            <label for="Credit Card">Credit Card</label><br />
-            <input
-              type="radio"
-              id="E-Wallet"
-              name="fav_language"
-              value="E-Wallet"
-            />
-            <label for="E-Wallet">E-Wallet</label>
-          </section>
-          <section
-            class="
-              checkout-main_rightBlock-dialog-price
-              tw-my-2 tw-flex tw-flex-row
-            "
+      <form
+        action=""
+        class="checkout-main_rightBlock-dialog tw-mt-6 tw-flex tw-flex-col"
+      >
+        <section class="tw-mb-4">
+          <h3 class="tw-text-xl tw-font-bold">Shipment</h3>
+          <input type="radio" id="JNE" name="fav_language" value="JNE" />
+          <label for="JNE">JNE</label><br />
+          <input type="radio" id="JNT" name="fav_language" value="JNT" />
+          <label for="JNT">JNT</label><br />
+          <input type="radio" id="POS" name="fav_language" value="POS" />
+          <label for="POS">POS</label>
+        </section>
+        <section class="tw-mb-4">
+          <h3 class="tw-text-xl tw-font-bold">Payment</h3>
+          <input
+            type="radio"
+            id="Bank Transfer"
+            name="fav_language"
+            value="Bank Transfer"
+          />
+          <label for="Bank Transfer">Bank Transfer</label><br />
+          <input
+            type="radio"
+            id="Credit Card"
+            name="fav_language"
+            value="Credit Card"
+          />
+          <label for="Credit Card">Credit Card</label><br />
+          <input
+            type="radio"
+            id="E-Wallet"
+            name="fav_language"
+            value="E-Wallet"
+          />
+          <label for="E-Wallet">E-Wallet</label>
+        </section>
+        <section
+          class="
+            checkout-main_rightBlock-dialog-price
+            tw-my-2 tw-flex tw-flex-row
+          "
+        >
+          <em class="tw-block tw-text-xl tw-text-gray-700">Total:</em>
+          <em class="tw-block tw-text-xl tw-font-semibold tw-text-gray-700"
+            >IDR 2.000.000</em
           >
-            <em class="tw-block tw-text-xl tw-text-gray-700">Total:</em>
-            <em class="tw-block tw-text-xl tw-font-semibold tw-text-gray-700"
-              >IDR 2.000.000</em
-            >
-          </section>
+        </section>
+        <section>
           <button
             mat-flat-button
             color="primary"
-            [ngStyle]="{ 'border-radius': '0', height: '100%', width: '100%' }"
+            [ngStyle]="{
+              'border-radius': '0',
+              height: '100%',
+              width: '100%'
+            }"
             class="search-btn tw-flex tw-flex-row"
             type="submit"
           >
             Checkout
           </button>
-        </form>
-      </section>
+        </section>
+      </form>
     </div>
   </div>
 </div>
