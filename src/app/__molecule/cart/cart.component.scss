@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     height: 100%;
-    overflow-y: auto;
+    overflow: auto;
     &-item {
       margin: 10px;
       width: 360px;

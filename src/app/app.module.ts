@@ -17,6 +17,7 @@ import { AuthComponent } from './__skeleton/auth/auth.component';
 import { CartComponent } from './__molecule/cart/cart.component';
 import { ProductDetailComponent } from './__molecule/product/product-detail/product-detail.component';
 import { CheckoutComponent } from './__pages/checkout/checkout.component';
+import { HomeComponent } from './__pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CheckoutComponent } from './__pages/checkout/checkout.component';
     CartComponent,
     ProductDetailComponent,
     CheckoutComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

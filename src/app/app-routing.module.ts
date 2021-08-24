@@ -5,8 +5,13 @@ import { ProductListComponent } from './__molecule/product/product-list/product-
 import { CartComponent } from './__molecule/cart/cart.component';
 import { ProductDetailComponent } from './__molecule/product/product-detail/product-detail.component';
 import { CheckoutComponent } from './__pages/checkout/checkout.component';
+import { HomeComponent } from './__pages/home/home.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
   {
     path: 'auth',
     component: AuthComponent

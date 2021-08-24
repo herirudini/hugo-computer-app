@@ -1,0 +1,38 @@
+.topbar {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 50px;
+  z-index: 3;
+}
+
+.home {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &-main {
+    width: 70%;
+    &-list {
+    }
+  }
+  &-side {
+    position: sticky;
+    top: 100px;
+    height: calc(90 * 1vh);
+    width: 30%;
+    &-cart {
+      height: 70%;
+      &-heading {
+        text-align: center;
+    }
+      &-list {
+      }
+    }
+    &-progress {
+      margin-top: 50px;
+      &-heading {
+          text-align: center;
+      }
+    }
+  }
+}
