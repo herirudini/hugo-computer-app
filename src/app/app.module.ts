@@ -18,6 +18,8 @@ import { CartComponent } from './__molecule/cart/cart.component';
 import { ProductDetailComponent } from './__molecule/product/product-detail/product-detail.component';
 import { CheckoutComponent } from './__pages/checkout/checkout.component';
 import { HomeComponent } from './__pages/home/home.component';
+import { ProductListItemComponent } from './__skeleton/product-list-item/product-list-item.component';
+import { CartItemComponent } from './__skeleton/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { HomeComponent } from './__pages/home/home.component';
     ProductDetailComponent,
     CheckoutComponent,
     HomeComponent,
+    ProductListItemComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,

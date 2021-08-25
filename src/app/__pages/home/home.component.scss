@@ -1,33 +1,21 @@
-.topbar {
-  position: fixed;
-  width: 100%;
-  margin-bottom: 50px;
-  z-index: 3;
-}
-
 .home {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
   &-main {
-    padding-top: 80px;
-    // width: 70%;
-    &-list {
-    }
+    // width: 75%;
   }
   &-side {
     position: sticky;
-    top: 55px;
+    top: 0px;
     height: calc(90 * 1vh);
-    margin-left: 20px;
-    // width: 500px;
+    width: 25%;
     &-cart {
       height: 70%;
       &-heading {
         text-align: center;
     }
-      &-list {
-      }
     }
     &-progress {
       margin-top: 10px;
